@@ -35,13 +35,25 @@ alert(nombre);
 
 var it = 1;
 var bool = false;
+var a=1;
+var note="bien";
 
 while (bool == false) {
 
     var nb = prompt('entrer un nombre entre 0et 100');
     if (nb == nombre) {
-        alert('gagné en'+it+"essais");
+        
         bool = true;
+        switch (it){
+            case 1:note="genial";
+            case 2:note="super" ;
+            default:note="pas bien";
+            
+            
+        }
+        alert('gagné en'+it+"essais"+note);
+        
+        
     } else if (nb < nombre) {
         alert('ton nombre est plus petit');
         it++;
